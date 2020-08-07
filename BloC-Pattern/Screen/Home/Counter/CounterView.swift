@@ -16,7 +16,7 @@ struct CounterView: View {
             VStack {
                 Text(asd.currentValue.description)
                     .fontWeight(.black)
-                    .font(Font.system(size: 120))
+                    .font(Font.system(size: 100))
                     .animation(nil)
                 HStack {
                     Button(action: asd.mapEventToState(.decrement)) {
