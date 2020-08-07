@@ -23,9 +23,9 @@ class CounterCubic: Cubit, ObservableObject {
         }
     }
     
-    var currentEvent: Event?
+    var currentEvent: Event
     
-    required init(_ value: Store, state: Event?) {
+    required init(_ value: Store, state: Event) {
         self.currentValue = value
         self.currentEvent = state
     }
@@ -55,7 +55,7 @@ class CounterCubit: Cubit, ObservableObject {
         }
     }
     
-    required init(_ value: Int, state: BlocState?) {
+    required init(_ value: Int, state: BlocState) {
         self.currentValue = value
     }
     

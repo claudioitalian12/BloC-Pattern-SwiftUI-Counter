@@ -12,15 +12,15 @@ protocol Cubit {
     associatedtype Event
     
     var currentValue: Stored { get set }
-    var currentEvent: Event? { get set }
+    var currentEvent: Event { get set }
     
-    init(_ value: Stored, state: Event?)
+    init(_ value: Stored, state: Event)
     
     func mapEventToState(_ event: Event)
 }
 
 extension Cubit {
-    var currentEvent: Event? {
+    var currentEvent: Event {
         get { return currentEvent }
         set { currentEvent = newValue }
      }
