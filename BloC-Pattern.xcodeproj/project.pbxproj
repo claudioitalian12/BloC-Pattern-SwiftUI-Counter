@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D15F29324DF38B30099221A /* CounterBlocProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15F29224DF38B30099221A /* CounterBlocProvider.swift */; };
 		5D21001724DE07E800A3F61C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D21001624DE07E800A3F61C /* AppDelegate.swift */; };
 		5D21002024DE07EB00A3F61C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D21001F24DE07EB00A3F61C /* Assets.xcassets */; };
 		5D21002324DE07EB00A3F61C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D21002124DE07EB00A3F61C /* LaunchScreen.storyboard */; };
@@ -16,6 +17,7 @@
 		5D21004D24DE08CF00A3F61C /* Cubit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D21004C24DE08CF00A3F61C /* Cubit.swift */; };
 		5D21004F24DE090300A3F61C /* BloCState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D21004E24DE090300A3F61C /* BloCState.swift */; };
 		5D21005124DE093D00A3F61C /* CounterBloC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D21005024DE093D00A3F61C /* CounterBloC.swift */; };
+		5D21005324DE8A8700A3F61C /* BloCProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D21005224DE8A8700A3F61C /* BloCProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D15F29224DF38B30099221A /* CounterBlocProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBlocProvider.swift; sourceTree = "<group>"; };
 		5D21001324DE07E800A3F61C /* BloC-Pattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BloC-Pattern.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D21001624DE07E800A3F61C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D21001F24DE07EB00A3F61C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		5D21004C24DE08CF00A3F61C /* Cubit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cubit.swift; sourceTree = "<group>"; };
 		5D21004E24DE090300A3F61C /* BloCState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloCState.swift; sourceTree = "<group>"; };
 		5D21005024DE093D00A3F61C /* CounterBloC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBloC.swift; sourceTree = "<group>"; };
+		5D21005224DE8A8700A3F61C /* BloCProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloCProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 			children = (
 				5D21004924DE088800A3F61C /* CounterView.swift */,
 				5D21005024DE093D00A3F61C /* CounterBloC.swift */,
+				5D15F29224DF38B30099221A /* CounterBlocProvider.swift */,
 			);
 			path = Counter;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			children = (
 				5D21004C24DE08CF00A3F61C /* Cubit.swift */,
 				5D21004E24DE090300A3F61C /* BloCState.swift */,
+				5D21005224DE8A8700A3F61C /* BloCProvider.swift */,
 			);
 			path = "BloC-Pattern";
 			sourceTree = "<group>";
@@ -296,6 +302,8 @@
 				5D21005124DE093D00A3F61C /* CounterBloC.swift in Sources */,
 				5D21004D24DE08CF00A3F61C /* Cubit.swift in Sources */,
 				5D21004A24DE088800A3F61C /* CounterView.swift in Sources */,
+				5D21005324DE8A8700A3F61C /* BloCProvider.swift in Sources */,
+				5D15F29324DF38B30099221A /* CounterBlocProvider.swift in Sources */,
 				5D21004F24DE090300A3F61C /* BloCState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

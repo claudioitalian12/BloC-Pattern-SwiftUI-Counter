@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum CounterState: BlocState {
     case increment
@@ -13,7 +14,8 @@ enum CounterState: BlocState {
     case none
 }
 
-class CounterCubic: Cubit, ObservableObject {
+// Example of Bloc
+class CounterBloc: Cubit, ObservableObject {
     typealias Store = Int
     typealias Event = CounterState
     
@@ -30,22 +32,33 @@ class CounterCubic: Cubit, ObservableObject {
         self.currentEvent = state
     }
     
-    func mapEventToState(_ event: Event) -> (() -> Void) {
-        return {
-            switch event {
-            case .increment:
-                self.currentValue += 1
-                self.currentEvent = event
-            case .decrement:
-                self.currentValue -= 1
-                self.currentEvent = event
-            default:
-                self.currentEvent = event
-            }
+    func mapEventToState(_ event: Event) {
+        switch event {
+        case .increment:
+            self.increment(event)
+        case .decrement:
+            self.decrement(event)
+        default:
+            self.currentEvent = event
+        }
+    }
+    
+    private func increment(_ event: Event) {
+        if currentValue < 10 {
+            self.currentValue += 1
+            self.currentEvent = event
+        }
+    }
+    
+    private func decrement(_ event: Event) {
+        if currentValue > 0 {
+            self.currentValue -= 1
+            self.currentEvent = event
         }
     }
 }
 
+// Example of Cubit
 class CounterCubit: Cubit, ObservableObject {
     typealias Store = Int
     

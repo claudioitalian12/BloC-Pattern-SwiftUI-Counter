@@ -9,25 +9,27 @@ import SwiftUI
 import Combine
 
 struct CounterView: View {
-    @ObservedObject var asd = CounterCubic(0, state: CounterState.none)
+    @ObservedObject var asd = ContentViewBlocProvider(CounterBloc(0, state: CounterState.none))
     
     var body: some View {
         NavigationView {
             VStack {
-                Text(asd.currentValue.description)
+                Text(asd.value.currentValue.description)
                     .fontWeight(.black)
                     .font(Font.system(size: 100))
                     .animation(nil)
                 HStack {
-                    Button(action: asd.mapEventToState(.decrement)) {
+                    Button(action: asd.action(.decrement)) {
                         Image(systemName: "minus.circle")
                     }
-                    Button(action: asd.mapEventToState(.increment)) {
+                    Button(action: asd.action(.increment)) {
                         Image(systemName: "plus.circle")
                     }
                 }
             }
             .font(.largeTitle)
-        }
+            .accentColor(Color.red)
+            .navigationBarTitle("Navigation")
+        }.colorInvert()
     }
 }
